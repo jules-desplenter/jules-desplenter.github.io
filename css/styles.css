@@ -1,0 +1,86 @@
+.o-flex{
+    display: flex;
+    justify-content: center;
+}
+
+/* components */
+
+html{
+    font-family: 'Roboto', sans-serif;
+}
+
+.c-header{
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.c-header__logo{
+    display: flex;
+    width: 30%;
+    align-items: center;
+}
+
+.c-header__logo-pic{
+    height: 3rem;
+}
+
+.c-main__profile{
+    display: flex;
+    padding-top: 2rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.c-main__profile-picture{
+    border-radius: 100%;
+    height: 12.5rem;
+    width: 12.5rem;
+}
+.c-main__profile-name{
+    padding-top: 1rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.c-main__profile-bio{
+    padding-top: 1rem;
+    width: 25%;
+    text-align: center;
+}
+
+.c-main__links{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 25%;
+    justify-items: center;
+    height: 40vh;
+}
+
+.c-main__links-big{
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+}
+.c-main__links-small{
+    height: 7rem;
+}
+.c-pic{
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  
+.c-header__logo{
+    width: 100%;
+}
+.c-main__profile-bio{
+    width: 90%;
+}
+
+.c-main__links{
+    width: 90%;
+}
+  }
