@@ -75,6 +75,25 @@ html{
     width: 100%;
 }
 
+.c-main__call{
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.c-main__call-link{
+    background-color: #74848c;
+    height: 2rem;
+    width: 10rem;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+
 .c-pic{
     width: 7rem;
     height: 7rem;
