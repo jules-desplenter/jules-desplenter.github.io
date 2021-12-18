@@ -1,4 +1,11 @@
 
+function addcontact() {
+  console.log("done");
+  var data = "BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3ADoe%3BJohn%0AFN%3AJohn%20Doe%0ATITLE%3A08002221111%0AORG%3AStackflowover%0AEMAIL%3BTYPE%3DINTERNET%3Ajohndoe%40gmail.com%0AEND%3AVCARD";
+  window.open("data:text/x-vcard;urlencoded," + data);
+}
+
+
 const place_stuff = (data) => {
   document.getElementById("name").innerHTML = data.name;
   document.getElementById("bio").innerHTML = data.bio;
@@ -25,6 +32,7 @@ const place_stuff = (data) => {
 
 
 const init = async () => {
+  document.getElementById("contact").addEventListener("click",addcontact);
   fetch("/js/test.json")
     .then((response) => {
       return response.json();
