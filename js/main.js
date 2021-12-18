@@ -1,17 +1,26 @@
 
 function addcontact(data) {
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
   let name = data.name.split(' ')
   console.log(name)
   let surname = name[0];
   let behindname = "";
+  let number = data.phone + "";
   for(let i = 1; i < name.length; i++){
     behindname += name[i] + " ";
   }
   // %3A = dubbelpunt %0A = enter %3B = ; %3D = =
   var data = `BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3A${behindname}%3B${surname}%0AFN%3A${behindname}%20${surname}%0ATEL%3Btype%3DCELL%3Btype%3DVOICE%3Btype%3Dpref%3A${data.phone}%0ANOTE%3A${data.bio}%0AEND%3AVCARD`;
   console.log(data)
-  // var data = "BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3ADoe%3BJohn%0AFN%3AJohn%20Doe%0ATITLE%3A08002221111%0AORG%3AStackflowover%0AEMAIL%3BTYPE%3DINTERNET%3Ajohndoe%40gmail.com%0AEND%3AVCARD";
-  window.open("data:text/x-vcard;urlencoded," + data);
+  if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+    window.open("data:text/x-vcard;urlencoded," + data);
+}else{if (/android/i.test(userAgent)) {
+  window.open(data);
+}else{
+  window.alert("this function is not available on computer but here is the phone number: " + number)
+}}
+  
 }
 
 
