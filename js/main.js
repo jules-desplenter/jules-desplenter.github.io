@@ -15,10 +15,10 @@ const place_stuff = (data) => {
     html = ''
   for(i = 0; i < links.length; i++){
       html += `<a
-      class="c-main__links"
+      class="c-main__links-items"
       href="${links[i].link}"
-      ><img class="c-pic" src="./images/${links[i].social}.svg" alt="facebook logo"
-    /></a>`
+      ><img class="c-pic" src="./images/icons8-${links[i].social}.svg" alt="facebook logo"
+    /><div class="c-main__links-text">${links[i].social}</div></a>`
   }
   document.getElementById("links").innerHTML = html;
 }
