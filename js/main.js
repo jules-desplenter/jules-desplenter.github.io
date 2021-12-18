@@ -1,7 +1,22 @@
 
 function addcontact() {
   console.log("done");
-  var data = "BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3ADoe%3BJohn%0AFN%3AJohn%20Doe%0ATITLE%3A08002221111%0AORG%3AStackflowover%0AEMAIL%3BTYPE%3DINTERNET%3Ajohndoe%40gmail.com%0AEND%3AVCARD";
+  let name = data.name.split(' ')[0]
+  let surname = name[0];
+  let behindname = "";
+  for(let i = 1; i < name.length(); i++){
+    behindname += name[i] + " ";
+  }
+  var data = `BEGIN:VCARD
+  VERSION:3.0
+  N:Desplenter;Jules;;;
+  FN:Desplenter Jules
+  ORG:Ugent;
+  EMAIL;type=INTERNET;type=HOME;type=pref:jules.desplenter1@gmail.com
+  TEL;type=CELL;type=VOICE;type=pref:+32477329979
+  NOTE:Student industrieel ingenieur
+  BDAY:2000-26-10
+  END:VCARD`;
   window.open("data:text/x-vcard;urlencoded," + data);
 }
 
