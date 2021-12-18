@@ -12,14 +12,10 @@ const place_stuff = (data) => {
         return b.importance - a.importance
     });
     console.log(links);
-    html = `<a
-    class="c-main__links-big"
-    href="${links[0].link}"
-    ><img class="c-pic" src="./images/${links[0].social}.svg" alt="facebook logo"
-  /></a>`
-  for(i = 1; i < links.length; i++){
+    html = ''
+  for(i = 0; i < links.length; i++){
       html += `<a
-      class="c-main__links-small"
+      class="c-main__links"
       href="${links[i].link}"
       ><img class="c-pic" src="./images/${links[i].social}.svg" alt="facebook logo"
     /></a>`

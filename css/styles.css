@@ -57,15 +57,13 @@ html{
     height: 40vh;
 }
 
-.c-main__links-big{
-    grid-column-start: 1;
-    grid-column-end: span 2;
-    grid-row-start: 1;
-    grid-row-end: span 2;
+.c-main__links{
+    display: flex;
+    flex-direction: column;
+    height: 5rem;
+    align-items: flex-start;
 }
-.c-main__links-small{
-    height: 7rem;
-}
+
 .c-pic{
     width: 100%;
     height: 100%;
