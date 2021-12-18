@@ -1,10 +1,11 @@
 
 function addcontact(data) {
   console.log("done");
+  console.log(data);
   let name = data.name.split(' ')[0]
   let surname = name[0];
   let behindname = "";
-  for(let i = 1; i < name.length(); i++){
+  for(let i = 1; i < name.length; i++){
     behindname += name[i] + " ";
   }
   // %3A = dubbelpunt %0A = enter %3B = ; %3D = =
