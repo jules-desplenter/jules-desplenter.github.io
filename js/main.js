@@ -16,7 +16,7 @@ function addcontact(data) {
   if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
     window.open("data:text/x-vcard;urlencoded," + data);
 }else{if (/android/i.test(userAgent)) {
-  window.open("/images/info.vcf");
+  window.open("../images/info.vcf");
 }else{
   window.alert("this function is not available on computer but here is the phone number: " + number)
 }}
