@@ -2,9 +2,6 @@ BEGIN:VCARD
 VERSION:3.0
 N:Desplenter;Jules;;;
 FN:Desplenter Jules
-ORG:Ugent;
-EMAIL;type=INTERNET;type=HOME;type=pref:jules.desplenter1@gmail.com
 TEL;type=CELL;type=VOICE;type=pref:+32477329979
 NOTE:Student industrieel ingenieur
-BDAY:2000-26-10
 END:VCARD

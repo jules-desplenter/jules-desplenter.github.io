@@ -7,7 +7,7 @@ function addcontact(data) {
   let surname = name[0];
   let behindname = "";
   let number = data.phone + "";
-  for(let i = 1; i < name.length; i++){
+  for (let i = 1; i < name.length; i++) {
     behindname += name[i] + " ";
   }
   // %3A = dubbelpunt %0A = enter %3B = ; %3D = =
@@ -15,20 +15,23 @@ function addcontact(data) {
   console.log(data)
   if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
     window.open("data:text/x-vcard;urlencoded," + data);
-}else{if (/android/i.test(userAgent)) {
-  window.open("../images/info.vcf");
-}else{
-  window.alert("this function is not available on computer but here is the phone number: " + number)
-}}
-  
+  } else {
+    if (/android/i.test(userAgent)) {
+      window.open("../images/info.vcf");
+    } else {
+      window.alert("this function is not available on computer but here is the phone number: " + number)
+    }
+  }
+
 }
 
 
 const place_stuff = (data) => {
-  document.getElementById("name").innerHTML = data.name;
+  if(data){
+    document.getElementById("name").innerHTML = data.name;
   document.getElementById("bio").innerHTML = data.bio;
   document.getElementById("picture").src = data.picture;
-  document.getElementById("contact").addEventListener("click",() => addcontact(data));
+  document.getElementById("contact").addEventListener("click", () => addcontact(data));
   links = [];
   links.push({ link: data.facebook, importance: data.facebook_importance, social: "facebook" });
   links.push({ link: data.instagram, importance: data.instagram_importance, social: "instagram" });
@@ -47,15 +50,31 @@ const place_stuff = (data) => {
     /><div class="c-main__links-text">${links[i].social}</div></a>`
   }
   document.getElementById("links").innerHTML = html;
+  }
+  
 }
 
 
 const init = async () => {
-  fetch("/js/test.json")
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => place_stuff(data));
+  const urlSearchParams = new URLSearchParams(window.location.search);
+  const params = Object.fromEntries(urlSearchParams.entries());
+  console.log(params.id);
+  url = `https://dotdbelgium.azurewebsites.net/api/getuser?code=XJ312iaiqxMTfwLqPCyzPNU6MJkPMIhTDVCiiMWihcmOQ01cPxUi5g==&id=${params.id}`
+  data = {}
+  const response = await fetch(url, {
+    method: 'POST', // *GET, POST, PUT, DELETE, etc.
+    mode: 'cors', // no-cors, *cors, same-origin
+    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'same-origin', // include, *same-origin, omit
+    headers: {
+      'Content-Type': 'application/json'
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    redirect: 'follow', // manual, *follow, error
+    referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+    body: JSON.stringify(data) // body data type must match "Content-Type" header
+  });
+  place_stuff(response.body)
 };
 
 document.addEventListener("DOMContentLoaded", init);
