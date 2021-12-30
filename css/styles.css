@@ -102,6 +102,13 @@ html{
     text-decoration: underline;
 }
 
+.o-link{
+    cursor: pointer;
+    color: #0645AD;
+    text-decoration: underline;
+    display: contents;
+}
+
 .c-main__call-link{
     background-color: #74848c;
     height: 2rem;
