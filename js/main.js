@@ -66,6 +66,10 @@ const place_stuff = (data) => {
 
 
 const init = async () => {
+  const splash = document.querySelector('.splash');
+  setTimeout(()=> {
+    splash.classList.add("display-none");
+  },2000)
   //online
   const urlSearchParams = new URLSearchParams(window.location.search);
   const params = Object.fromEntries(urlSearchParams.entries());
