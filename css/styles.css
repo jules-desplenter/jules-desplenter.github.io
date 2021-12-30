@@ -39,6 +39,16 @@ html{
     height: 12.5rem;
     width: 12.5rem;
 }
+
+.c-main__profile-picture-company{
+    border-radius: 100%;
+    height: 3rem;
+    width: 3rem;
+    border: #74848c solid 1px;
+    margin-right: -9rem;
+    margin-top: -2.5rem;
+    background-color: #fff;
+}
 .c-main__profile-name{
     padding-top: 1rem;
     font-weight: bold;

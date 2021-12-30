@@ -36,6 +36,7 @@ const place_stuff = (data) => {
     document.getElementById("function").innerHTML = data.function;
     document.getElementById("location").innerHTML = data.location;
     document.getElementById("picture").src = data.picture;
+    document.getElementById("companypicture").src = data.companypicture;
     document.getElementById("contact").addEventListener("click", () => addcontact(data));
     links = [];
     links.push({ link: data.facebook, importance: data.facebook_importance, social: "facebook" });
