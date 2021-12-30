@@ -27,38 +27,47 @@ function addcontact(data) {
 
 
 const place_stuff = (data) => {
-  if(data){
+  console.log(data.function);
+  if (data) {
     document.getElementById("name").innerHTML = data.name;
-  document.getElementById("bio").innerHTML = data.bio;
-  document.getElementById("picture").src = data.picture;
-  document.getElementById("contact").addEventListener("click", () => addcontact(data));
-  links = [];
-  links.push({ link: data.facebook, importance: data.facebook_importance, social: "facebook" });
-  links.push({ link: data.instagram, importance: data.instagram_importance, social: "instagram" });
-  links.push({ link: data.linkedin, importance: data.linkedin_importance, social: "linkedin" });
-  links.sort(function (a, b) {
-    return b.importance - a.importance
-  });
+    document.getElementById("bio").innerHTML = data.bio;
+    document.getElementById("link").innerHTML = data.link;
+    document.getElementById("link").href = data.link;
+    document.getElementById("function").innerHTML = data.function;
+    document.getElementById("location").innerHTML = data.location;
+    document.getElementById("picture").src = data.picture;
+    document.getElementById("contact").addEventListener("click", () => addcontact(data));
+    links = [];
+    links.push({ link: data.facebook, importance: data.facebook_importance, social: "facebook" });
+    links.push({ link: data.instagram, importance: data.instagram_importance, social: "instagram" });
+    links.push({ link: data.linkedin, importance: data.linkedin_importance, social: "linkedin" });
+    links.push({ link: data.mail, importance: data.mail_importance, social: "mail" });
+    links.push({ link: data.whatsapp, importance: data.whatsapp_importance, social: "whatsapp" });
+    links.sort(function (a, b) {
+      return b.importance - a.importance
+    });
 
 
-  html = ''
-  for (i = 0; i < links.length; i++) {
-    html += `<a
+    html = ''
+    for (i = 0; i < links.length; i++) {
+      if (links[i].importance) {
+        html += `<a
       class="c-main__links-items"
       href="${links[i].link}"
-      ><img class="c-pic" src="./images/icons8-${links[i].social}.svg" alt="facebook logo"
+      ><img class="c-pic" src="./images/iconmonstr-${links[i].social}.svg" alt="facebook logo"
     /><div class="c-main__links-text">${links[i].social}</div></a>`
+      }
+    }
+    document.getElementById("links").innerHTML = html;
   }
-  document.getElementById("links").innerHTML = html;
-  }
-  
+
 }
 
 
 const init = async () => {
+  //online
   const urlSearchParams = new URLSearchParams(window.location.search);
   const params = Object.fromEntries(urlSearchParams.entries());
-  console.log(params.id);
   url = `https://dotdbelgium.azurewebsites.net/api/getuser?code=XJ312iaiqxMTfwLqPCyzPNU6MJkPMIhTDVCiiMWihcmOQ01cPxUi5g==&id=${params.id}`
   data = {}
   fetch(url, {
@@ -76,7 +85,12 @@ const init = async () => {
     return response.json();
   })
   .then((data) => {place_stuff(data)})
-  // place_stuff(response.body);
+  // //test
+  // fetch("/js/test.json")
+  //   .then((response) => {
+  //     return response.json();
+  //   })
+  //   .then((data) => place_stuff(data));
 };
 
 document.addEventListener("DOMContentLoaded", init);

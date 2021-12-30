@@ -1,6 +1,9 @@
 {
     "name":"Jules Desplenter",
     "bio":"Student industrieel ingenieur met heel veel swag #jwz iuzeh iuezh eizha azeiohu zeuih azeih azeih azeih zeuioh ezuiohze uhaze uioazeh azefuih",
+    "link":"https://dotdsolutions.eu/",
+    "function":"CTO",
+    "location":"Kortrijk",
     "picture":"/images/jules.jpg",
     "phone":"0477329979",
     "phone_importance":5,
@@ -9,5 +12,7 @@
     "instagram":"https://www.instagram.com/julesdesplenter/",
     "instagram_importance":3,
     "linkedin":"https://www.linkedin.com/in/jules-desplenter-a120a0181/",
-    "linkedin_importance":3
+    "linkedin_importance":3,
+    "mail":"mailto:jules.desplenter@ugent.be",
+    "mail_importance":5
 }

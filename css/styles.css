@@ -1,6 +1,8 @@
 .o-flex{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* components */
@@ -73,6 +75,7 @@ html{
     justify-content: center;
     color: black;
     width: 100%;
+    margin-top: 0.5rem;
 }
 
 .c-main__call{
@@ -80,6 +83,13 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+
+.c-main__link{
+    cursor: pointer;
+    color: #0645AD;
+    text-decoration: underline;
 }
 
 .c-main__call-link{
@@ -100,11 +110,17 @@ html{
     border-radius: 20%;
 }
 
+.c-header__logo{
+    width: 50%;
+}
+
+#scale{
+    transform: scale(0.5);
+}
+
 @media only screen and (max-width: 600px) {
   
-.c-header__logo{
-    width: 100%;
-}
+
 .c-main__profile-bio{
     width: 90%;
 }
