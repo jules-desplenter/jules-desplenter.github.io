@@ -73,10 +73,9 @@ const init = async () => {
     // redirect: 'follow', // manual, *follow, error
     // referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
   }).then((response) => {
-    console.log(response);
     return response.json();
   })
-  .then((data) => {console.log(data)})
+  .then((data) => {place_stuff(data)})
   // place_stuff(response.body);
 };
 
