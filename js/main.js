@@ -29,9 +29,11 @@ function addcontact(data) {
 const place_stuff = (data) => {
   console.log(data.function);
   if (data) {
+    if(data.directlink){
+      window.location.href = data.directlink;
+    }
     document.getElementById("name").innerHTML = data.name;
     document.getElementById("bio").innerHTML = data.bio;
-    document.getElementById("link").innerHTML = data.link;
     document.getElementById("link").href = data.link;
     document.getElementById("function").innerHTML = data.function;
     document.getElementById("location").innerHTML = data.location;

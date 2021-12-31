@@ -56,7 +56,7 @@ html{
 }
 
 .c-main__profile-bio{
-    padding-top: 1rem;
+    padding-top: .5rem;
     width: 25%;
     text-align: center;
 }
@@ -107,7 +107,6 @@ html{
     color: #0645AD;
     text-decoration: underline;
     display: contents;
-    padding-top: 1rem;
 }
 
 .c-main__call-link{
@@ -120,6 +119,7 @@ html{
     align-items: center;
     text-decoration: none;
     color: #fff;
+    margin: .5rem;
 }
 
 .c-pic{
@@ -149,6 +149,20 @@ html{
     width: 50%;
 }
 
+.c-footer{
+    margin-top: 1.5rem;
+}
+
+a[href$="undefined"] {
+    display:none;
+  }
+.row{
+    flex-direction: row;
+}
+
+.pt-1{
+    padding-top: .5rem;
+}
 
 @media only screen and (max-width: 600px) {
     .c-header__logo{
