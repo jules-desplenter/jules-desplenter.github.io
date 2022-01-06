@@ -1,3 +1,16 @@
+:root{
+    --casper: #a5b9c9;
+--blue-whale: #052846;
+--bali-hai: #7b9cac;
+--bali-hai: #7a93ac;
+--gothic: #6e8b9d;
+--river-bed: #485765;
+--shuttle-gray: #566771;
+--black-pearl: #050f19;
+--jumbo: #84848e;
+}
+
+
 .o-flex{
     display: flex;
     justify-content: center;
@@ -10,8 +23,12 @@
 html{
     font-family: 'Roboto', sans-serif;
 }
+.c-all{
+    transform: translatey(-100vh);
+    opacity: 0;
+}
 
-.c-header{
+/* .c-header{
     height: 4rem;
     display: flex;
     justify-content: center;
@@ -25,6 +42,15 @@ html{
 
 .c-header__logo-pic{
     height: 3rem;
+} */
+
+.c-main__background{
+    width: calc(100% - 16px);
+    height: auto;
+    margin-bottom: -9rem;
+    z-index: -10;
+    border-radius: 2rem;
+    border: 8px #fff solid;
 }
 
 .c-main__profile{
@@ -38,16 +64,18 @@ html{
     border-radius: 100%;
     height: 12.5rem;
     width: 12.5rem;
+    border: 4px #fff solid;
+
 }
 
 .c-main__profile-picture-company{
     border-radius: 100%;
     height: 3rem;
     width: 3rem;
-    border: #74848c solid 1px;
     margin-right: -9rem;
     margin-top: -2.5rem;
     background-color: #fff;
+    border: 4px #fff solid;
 }
 .c-main__profile-name{
     padding-top: 1rem;
@@ -98,7 +126,7 @@ html{
 
 .c-main__link{
     cursor: pointer;
-    color: #0645AD;
+    color: var(--river-bed);
     text-decoration: underline;
 }
 
@@ -110,7 +138,7 @@ html{
 }
 
 .c-main__call-link{
-    background-color: #74848c;
+    background-color: var(--gothic);
     height: 2rem;
     width: 10rem;
     border-radius: 20px;
@@ -134,16 +162,22 @@ html{
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #74848c;
+    background-color: var(--bali-hai);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: column;
 }
 .splash.display-none{
-    opacity: 0;
-    z-index: -10;
-    transition: all .5s;
+    transform: translatey(100vh);
+    transition: all .2s;
+}
+
+.c-all.display-none{
+    transform: translatey(0);
+    transition: transform .5s;
+    opacity: 1;
 }
 .splash-logo{
     width: 50%;
