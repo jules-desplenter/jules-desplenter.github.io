@@ -37,54 +37,62 @@
     <script src="./js/main.js"></script>
   </head>
 
-  <body >
-    <div class="splash down" >
+  <body>
+    <div class="splash down">
       <img
-          class="splash-logo"
-          src="./images/logo.png"
-          alt="logo of dotd"
-        />
-        <img
-        class="splash-slogan"
-        src="./images/slogan.png"
+        id="img2"
+        class="splash-logo"
+        src="./images/dotd-white.svg"
         alt="logo of dotd"
       />
-
+      <img
+        id="img1"
+        class="splash-logo"
+        src="./images/dotd.svg"
+        alt="logo of dotd"
+      />
+      <img class="splash-slogan" src="./images/slogan-white.png" alt="logo of dotd" />
     </div>
     <div class="c-all down">
-    <div class="c-main">
-      <img class="c-main__background" src="./images/background.jpg" alt="background picture">
-      <div class="c-main__profile">
-        <img
-          id="picture"
-          class="c-main__profile-picture"
-          alt="profile picture"
-        />
-        <img
-        id="companypicture"
-        class="c-main__profile-picture-company"
-        alt="profile picture"
-        onerror="this.onerror=null; this.remove()"
-      />
-        <div class="c-main__profile-name" id="name"></div>
-        <div class="c-main__profile-function pt-1" id="function"></div>
-        <div class="c-main__profile-locatie pt-1" id="location"></div>
-        <div class="c-main__profile-bio" id="bio"></div>
-      </div>
-      <div class="o-flex row">
-        <div class="c-main__call">
-          <a class="c-main__call-link" id="contact" >add to contact</a>
+      <div class="c-main">
+        <div class="c-center">
+          <img
+            class="c-main__background"
+            src="./images/desktop.jpg"
+            alt="background picture"
+          />
         </div>
-        <a class="c-main__call-link" id="link" target="blank">website</a>
-      </div>
-      <div class="o-flex">
-        <div class="c-main__links" id="links">
+        <div class="c-main__profile">
+          <img
+            id="picture"
+            class="c-main__profile-picture"
+            alt="profile picture"
+          />
+          <img
+            id="companypicture"
+            class="c-main__profile-picture-company"
+            alt="profile picture"
+            onerror="this.onerror=null; this.remove()"
+          />
+          <div class="c-main__profile-name" id="name"></div>
+          <div class="c-main__profile-function pt-1" id="function"></div>
+          <div class="c-main__profile-locatie pt-1" id="location"></div>
+          <div class="c-main__profile-bio" id="bio"></div>
         </div>
-      </div>
-      <div class="o-flex c-footer">
-        Purchase your own dotd <a class="o-link" href="https://dotdsolutions.eu/">here</a>.
+        <div class="o-flex row">
+          <div class="c-main__call">
+            <a class="c-main__call-link" id="contact">Call me</a>
+          </div>
+          <a class="c-main__call-website" id="link" target="blank"><img src="./images/website_globe.svg" alt="link to website"></a>
+        </div>
+        <div class="o-flex">
+          <div class="c-main__links" id="links"></div>
+        </div>
+        <div class="o-flex c-footer">
+          powered by dotd: 
+          <a class="o-link" href="https://dotdsolutions.eu/">discover the science of networking</a>.
+        </div>
       </div>
     </div>
-  </div>
   </body>
 </html>

@@ -44,8 +44,14 @@ html{
     height: 3rem;
 } */
 
+.c-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .c-main__background{
-    width: calc(100% - 16px);
+    width: 30%;
     height: auto;
     margin-bottom: -9rem;
     z-index: -10;
@@ -106,6 +112,29 @@ html{
     padding-bottom: 0.5rem;
 }
 
+.c-main__links-items-first{
+   grid-column-start: 1;
+    grid-column-end: 4;
+    height: 13rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: -2rem;
+}
+
+.c-first{
+    height: 7rem;
+    width: 90%;
+    box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+
 .c-main__links-text{
     all: unset;
     display: flex;
@@ -116,6 +145,11 @@ html{
     margin-top: 0.5rem;
 }
 
+.c-main__links-text-first{
+    width: auto;
+    font-weight: 600;
+}
+
 .c-main__call{
     height: 5rem;
     display: flex;
@@ -123,6 +157,10 @@ html{
     align-items: center;
     cursor: pointer;
 }
+/* 
+.c-main__call-website{
+    width: 20rem;
+} */
 
 .c-main__link{
     cursor: pointer;
@@ -156,16 +194,19 @@ html{
     border-radius: 20%;
 }
 
+.c-pic-first{
+    margin-right: 1rem;
+}
+
 .splash{
     position: fixed;
     top: O;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: var(--bali-hai);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-image: url("../images/desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
     height: 100vh;
     flex-direction: column;
 }
@@ -180,11 +221,22 @@ html{
     opacity: 1;
 }
 .splash-logo{
-    width: 50%;
+    width: 30rem;
+    margin-top: 7rem;
+    margin-left: 6rem;
+
+}
+
+.splash-slogan{
+    position: fixed;
+    left: 1rem;
+    bottom: 1rem;
+    width: 30rem;
 }
 
 .c-footer{
-    margin-top: 1.5rem;
+    margin-top: 5rem;
+    margin-bottom: 0.5rem;
 }
 
 a[href$="undefined"] {
@@ -197,6 +249,9 @@ a[href$="undefined"] {
 .pt-1{
     padding-top: .5rem;
 }
+
+#img1 {display:block;}
+#img2 {display:none}
 
 @media only screen and (max-width: 600px) {
     .c-header__logo{
@@ -211,7 +266,32 @@ a[href$="undefined"] {
     width: 90%;
 }
 
-.splash-logo{
-    width: 80%;
+.splash{
+    background-image: url("../images/mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.splash-logo{
+    margin: 0;
+    width: 50%;
+    position: fixed;
+    bottom: 1rem;
+}
+
+.splash-slogan{
+    position: relative;
+    width: 70%;
+    margin-top: 7rem;
+}
+
+.c-main__background{
+    width: calc(100% - 16px);
+}
+
+#img1 {display: none;}
+    #img2 {display: block;}
   }

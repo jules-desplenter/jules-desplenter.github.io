@@ -51,8 +51,12 @@ const place_stuff = (data) => {
     });
 
 
-    html = ''
-    for (i = 0; i < links.length; i++) {
+    html = `<a
+    class="c-main__links-items c-main__links-items-first"
+    href="${links[0].link}"
+    ><div class="c-first"><img class="c-pic c-pic-first" src="./images/iconmonstr-${links[0].social}.svg" alt="facebook logo"
+  /><div><div class="c-main__links-text-first">${links[0].social}</div><div class="c-main__links-text">Make sure to take a look here it's my favorite!</div></div></div></a>`
+    for (i = 1; i < links.length; i++) {
       if (links[i].importance) {
         html += `<a
       class="c-main__links-items"
