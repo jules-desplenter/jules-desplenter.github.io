@@ -73,10 +73,10 @@ const place_stuff = (data) => {
 const init = async() => {
     const splash = document.querySelectorAll('.down');
     setTimeout(() => {
-        splash[0].classList.add("display-none");
-        splash[1].classList.add("display-none");
-    }, 2000)
-    online
+            splash[0].classList.add("display-none");
+            splash[1].classList.add("display-none");
+        }, 2000)
+        // online
     const urlSearchParams = new URLSearchParams(window.location.search);
     const params = Object.fromEntries(urlSearchParams.entries());
     url = `https://dotdbelgium.azurewebsites.net/api/getuser?code=XJ312iaiqxMTfwLqPCyzPNU6MJkPMIhTDVCiiMWihcmOQ01cPxUi5g==&id=${params.id}`
