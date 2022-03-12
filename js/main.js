@@ -96,7 +96,7 @@ const init = async() => {
             return response.json();
         })
         .then((data) => { place_stuff(data) })
-        //test
+        // test
         // fetch("/js/test.json")
         //     .then((response) => {
         //         return response.json();

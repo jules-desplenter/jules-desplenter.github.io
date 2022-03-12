@@ -2,7 +2,7 @@
     --casper: #a5b9c9;
     --blue-whale: #052846;
     --bali-hai: #7b9cac;
-    --bali-hai: #7a93ac;
+    --bali-hai2: #7a93ac;
     --gothic: #6e8b9d;
     --river-bed: #485765;
     --shuttle-gray: #566771;
@@ -32,7 +32,6 @@ html {
 #function {
     font-size: 1rem;
     margin-bottom: 0;
-    color: var(--river-bed);
 }
 
 #location {
@@ -40,13 +39,11 @@ html {
     padding-top: 0;
     font-size: 0.8rem;
     margin-bottom: 0.8rem;
-    color: var(--river-bed);
 }
 
 #bio {
-    text-align: justify;
+    text-align: center;
     font-size: 1rem;
-    color: var(--river-bed);
 }
 
 .c-all {
@@ -96,8 +93,8 @@ html {
 
 .c-main__profile-picture {
     border-radius: 100%;
-    height: 12.5rem;
-    width: 12.5rem;
+    height: 10.5rem;
+    width: 10.5rem;
     border: 4px #fff solid;
 }
 
@@ -140,6 +137,27 @@ html {
     padding-bottom: 0.5rem;
 }
 
+
+/* Select every 3rd list item starting with first */
+
+.c-main__links-items:nth-child(3n - 2) {
+    justify-self: end;
+}
+
+
+/* Select every 3rd list item starting with 2nd */
+
+.c-main__links-items:nth-child(3n - 1) {
+    justify-self: start;
+}
+
+
+/* Select every 3rd child item, as long as it has class "el" */
+
+.c-main__links-items:nth-child(3n) {
+    justify-self: center;
+}
+
 .c-main__links-items-first {
     grid-column-start: 1;
     grid-column-end: 4;
@@ -153,7 +171,7 @@ html {
 
 .c-first {
     height: 7rem;
-    width: 90%;
+    width: 88%;
     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.15);
     display: flex;
     align-items: center;
@@ -172,6 +190,10 @@ html {
     width: 100%;
     margin-top: 0.5rem;
     color: var(--river-bed);
+}
+
+#link {
+    text-decoration: none;
 }
 
 .c-main__links-text-first {
@@ -215,7 +237,15 @@ html {
 }
 
 .c-main__call-website {
-    height: 3rem;
+    height: 2rem;
+    margin-left: 0.5rem;
+}
+
+.c-main__call-text {
+    color: var(--blue-whale);
+    margin-top: 0;
+    margin-bottom: 0;
+    text-decoration: none;
 }
 
 .c-pic {
@@ -262,8 +292,8 @@ html {
     position: fixed;
     left: 5rem;
     bottom: 1rem;
-    color: var(--shuttle-gray);
-    font-size: 2.5rem;
+    color: var(--bali-hai);
+    font-size: 36px;
 }
 
 .c-footer {
@@ -345,7 +375,7 @@ a[href$="undefined"] {
         text-align: center;
         height: 40vh;
         bottom: 0;
-        font-size: 1.5rem;
+        font-size: 5vw;
     }
     .c-main__background {
         width: calc(100% - 16px);
