@@ -31,14 +31,14 @@ const place_stuff = (data) => {
         if (data.directlink) {
             window.location.href = data.directlink;
         }
-        document.getElementById("Name").innerHTML = data.name;
-        document.getElementById("Bio").innerHTML = data.bio;
-        document.getElementById("Link").href = data.link;
-        document.getElementById("Function").innerHTML = data.function;
-        document.getElementById("Location").innerHTML = data.location;
-        document.getElementById("Picture").src = data.picture;
-        document.getElementById("Companypicture").src = data.companypicture;
-        document.getElementById("Contact").addEventListener("click", () => addcontact(data));
+        document.getElementById("name").innerHTML = data.name;
+        document.getElementById("bio").innerHTML = data.bio;
+        document.getElementById("link").href = data.link;
+        document.getElementById("function").innerHTML = data.function;
+        document.getElementById("location").innerHTML = data.location;
+        document.getElementById("picture").src = data.picture;
+        document.getElementById("companypicture").src = data.companypicture;
+        document.getElementById("contact").addEventListener("click", () => addcontact(data));
         links = [];
         links.push({ link: data.facebook, importance: data.facebook_importance, social: "Facebook" });
         links.push({ link: data.instagram, importance: data.instagram_importance, social: "Instagram" });
