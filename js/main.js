@@ -40,11 +40,11 @@ const place_stuff = (data) => {
         document.getElementById("companypicture").src = data.companypicture;
         document.getElementById("contact").addEventListener("click", () => addcontact(data));
         links = [];
-        links.push({ link: data.facebook, importance: data.facebook_importance, social: "facebook" });
-        links.push({ link: data.instagram, importance: data.instagram_importance, social: "instagram" });
-        links.push({ link: data.linkedin, importance: data.linkedin_importance, social: "linkedin" });
-        links.push({ link: data.mail, importance: data.mail_importance, social: "mail" });
-        links.push({ link: data.whatsapp, importance: data.whatsapp_importance, social: "whatsapp" });
+        links.push({ link: data.facebook, importance: data.facebook_importance, social: "Facebook" });
+        links.push({ link: data.instagram, importance: data.instagram_importance, social: "Instagram" });
+        links.push({ link: data.linkedin, importance: data.linkedin_importance, social: "Linkedin" });
+        links.push({ link: data.mail, importance: data.mail_importance, social: "Mail" });
+        links.push({ link: data.whatsapp, importance: data.whatsapp_importance, social: "Whatsapp" });
         links.sort(function(a, b) {
             return b.importance - a.importance
         });
