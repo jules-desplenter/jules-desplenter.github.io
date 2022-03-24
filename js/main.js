@@ -31,20 +31,20 @@ const place_stuff = (data) => {
         if (data.directlink) {
             window.location.href = data.directlink;
         }
-        document.getElementById("name").innerHTML = data.name;
-        document.getElementById("bio").innerHTML = data.bio;
-        document.getElementById("link").href = data.link;
-        document.getElementById("function").innerHTML = data.function;
-        document.getElementById("location").innerHTML = data.location;
-        document.getElementById("picture").src = data.picture;
-        document.getElementById("companypicture").src = data.companypicture;
-        document.getElementById("contact").addEventListener("click", () => addcontact(data));
+        document.getElementById("Name").innerHTML = data.name;
+        document.getElementById("Bio").innerHTML = data.bio;
+        document.getElementById("Link").href = data.link;
+        document.getElementById("Function").innerHTML = data.function;
+        document.getElementById("Location").innerHTML = data.location;
+        document.getElementById("Picture").src = data.picture;
+        document.getElementById("Companypicture").src = data.companypicture;
+        document.getElementById("Contact").addEventListener("click", () => addcontact(data));
         links = [];
-        links.push({ link: data.facebook, importance: data.facebook_importance, social: "facebook" });
-        links.push({ link: data.instagram, importance: data.instagram_importance, social: "instagram" });
-        links.push({ link: data.linkedin, importance: data.linkedin_importance, social: "linkedin" });
-        links.push({ link: data.mail, importance: data.mail_importance, social: "mail" });
-        links.push({ link: data.whatsapp, importance: data.whatsapp_importance, social: "whatsapp" });
+        links.push({ link: data.facebook, importance: data.facebook_importance, social: "Facebook" });
+        links.push({ link: data.instagram, importance: data.instagram_importance, social: "Instagram" });
+        links.push({ link: data.linkedin, importance: data.linkedin_importance, social: "Linkedin" });
+        links.push({ link: data.mail, importance: data.mail_importance, social: "Mail" });
+        links.push({ link: data.whatsapp, importance: data.whatsapp_importance, social: "Whatsapp" });
         links.sort(function(a, b) {
             return b.importance - a.importance
         });
