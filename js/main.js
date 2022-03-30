@@ -38,6 +38,7 @@ const place_stuff = (data) => {
         document.getElementById("location").innerHTML = data.location;
         document.getElementById("picture").src = data.picture;
         document.getElementById("companypicture").src = data.companypicture;
+        document.getElementById("coverpicture").src = data.coverpicture;
         document.getElementById("contact").addEventListener("click", () => addcontact(data));
         links = [];
         links.push({ link: data.facebook, importance: data.facebook_importance, social: "Facebook" });
@@ -46,7 +47,11 @@ const place_stuff = (data) => {
         links.push({ link: data.mail, importance: data.mail_importance, social: "Mail" });
         links.push({ link: data.whatsapp, importance: data.whatsapp_importance, social: "Whatsapp" });
         links.sort(function(a, b) {
-            return b.importance - a.importance
+            if (a.importance == null) {
+                return 1;
+              } else {
+                return a.importance - b.importance;
+              }
         });
 
 
