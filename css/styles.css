@@ -368,24 +368,23 @@ a[href$="undefined"] {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
-        width: 100%;
+        flex-direction: column;
+        flex-direction: column-reverse;
     }
     .splash-logo {
-        margin: 0;
-        width: 50%;
-        position: fixed;
-        bottom: 1rem;
+        width: 10rem;
+        margin-bottom: 10vh;
+        margin-top: -0.5rem;
     }
-    .splash-slogan {
-        position: fixed;
-        width: 100%;
-        left: 0;
-        text-align: center;
-        height: 40vh;
-        bottom: 0;
-        font-size: 5vw;
-    }
+   .splash-app{
+        width: 10rem;
+        margin-left: 0;
+        margin-bottom: -10vh;
+   }
+   .splash-line{
+       width: 10rem;
+       height: 2px
+   }
     .c-main__background {
         width: 90%;
     }
