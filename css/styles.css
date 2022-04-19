@@ -77,12 +77,12 @@ html {
 
 .c-main__background {
     width: 25%;
-    height: auto;
+    height: 20rem;
     margin-bottom: -9rem;
     z-index: -10;
     border-radius: 2rem;
     border: 8px #fff solid;
-}
+object-fit: cover;}
 
 .c-main__profile {
     display: flex;
