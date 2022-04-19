@@ -76,7 +76,7 @@ html {
 }
 
 .c-main__background {
-    width: 30%;
+    width: 25%;
     height: auto;
     margin-bottom: -9rem;
     z-index: -10;
@@ -102,7 +102,7 @@ html {
     border-radius: 100%;
     height: 3rem;
     width: 3rem;
-    margin-right: -9rem;
+    margin-right: -8rem;
     margin-top: -2.5rem;
     background-color: #fff;
     border: 4px #fff solid;
@@ -212,7 +212,7 @@ html {
 
 .c-main__link {
     cursor: pointer;
-    color: var(--river-bed);
+    color: black;
     text-decoration: underline;
 }
 
@@ -237,7 +237,8 @@ html {
 }
 
 .c-main__call-website {
-    height: 2rem;
+    margin-top: 4px;
+    height: 2.5rem;
     margin-left: 0.5rem;
 }
 
@@ -260,15 +261,14 @@ html {
 
 .splash {
     position: fixed;
-    top: O;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url("../images/desktop.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    height: 100vh;
-    flex-direction: column;
+    background-color: #02294A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .splash.display-none {
@@ -283,17 +283,21 @@ html {
 }
 
 .splash-logo {
-    width: 20rem;
-    margin-top: 5rem;
-    margin-left: 5rem;
+    width: 15rem;
+    z-index: 5;
 }
 
-.splash-slogan {
-    position: fixed;
-    left: 5rem;
-    bottom: 1rem;
-    color: var(--bali-hai);
-    font-size: 36px;
+.splash-app{
+    width: 20rem;
+    margin-left: -4.5rem;
+}
+
+.splash-line{
+    width: 2px;
+    height: 10rem;
+    background-color: #8E9498;
+    z-index: 10;
+    margin: 3rem;
 }
 
 .c-footer {
@@ -326,12 +330,17 @@ a[href$="undefined"] {
 }
 
 .c-footer-text {
-    margin-bottom: 2px;
-    color: var(--river-bed);
+    margin-bottom: 6px;
+    color: black;
 }
 
 .c-footer-image {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
+    margin-right: 8px;
+}
+
+.c-footer-link{
+    margin-right: 8px;
 }
 
 .u-w-90 {
@@ -355,12 +364,12 @@ a[href$="undefined"] {
         width: 90%;
     }
     .splash {
-        background-image: url("../images/mobile_small.jpg");
-        background-repeat: no-repeat;
-        background-size: auto 120%;
+       background-color: #02294A;
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 100vh;
+        width: 100%;
     }
     .splash-logo {
         margin: 0;
@@ -378,7 +387,7 @@ a[href$="undefined"] {
         font-size: 5vw;
     }
     .c-main__background {
-        width: calc(100% - 16px);
+        width: 90%;
     }
     #img1 {
         display: none;
