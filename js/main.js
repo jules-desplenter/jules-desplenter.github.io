@@ -16,7 +16,7 @@ function addcontact(data) {
     window.open("data:text/x-vcard;urlencoded," + data);
   } else {
     if (/android/i.test(userAgent)) {
-    window.alert(navigator.contacts)
+    window.alert(JSON.stringify(navigator.contacts))
     } else {
       window.alert(
         "this function is not available on computer but here is the phone number: " +

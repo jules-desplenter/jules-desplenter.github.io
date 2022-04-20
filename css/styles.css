@@ -273,7 +273,7 @@ object-fit: cover;
 }
 
 .splash.display-none {
-    transform: translatey(100vh);
+    transform: translatey(120vh);
     transition: all .2s;
 }
 
