@@ -82,7 +82,8 @@ html {
     z-index: -10;
     border-radius: 2rem;
     border: 8px #fff solid;
-object-fit: cover;}
+object-fit: cover;
+}
 
 .c-main__profile {
     display: flex;
@@ -224,7 +225,7 @@ object-fit: cover;}
 }
 
 .c-main__call-link {
-    background-color: var(--blue-whale);
+    background-color:black;
     width: 14rem;
     border-radius: 20px;
     display: flex;
@@ -387,6 +388,8 @@ a[href$="undefined"] {
    }
     .c-main__background {
         width: 90%;
+        height: 12rem;
+
     }
     #img1 {
         display: none;
