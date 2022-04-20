@@ -227,7 +227,7 @@ object-fit: cover;
 .c-main__call-link {
     background-color:black;
     width: 14rem;
-    border-radius: 20px;
+    border-radius: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -238,9 +238,9 @@ object-fit: cover;
 }
 
 .c-main__call-website {
-    margin-top: 4px;
-    height: 2.5rem;
-    margin-left: 0.5rem;
+    margin-top: 8px;
+    height: 3rem;
+    margin-right: 0.5rem;
 }
 
 .c-main__call-text {
