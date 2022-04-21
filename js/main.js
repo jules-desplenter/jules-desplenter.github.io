@@ -16,7 +16,7 @@ function addcontact(data) {
     window.open("data:text/x-vcard;urlencoded," + data);
   } else {
     if (/android/i.test(userAgent)) {
-     navigator.share(data);
+     window.open("tel:" + data.phone)
     } else {
       window.alert(
         "this function is not available on computer but here is the phone number: " +
@@ -108,27 +108,27 @@ const init = async () => {
   const params = Object.fromEntries(urlSearchParams.entries());
   url = `https://dotdbelgium.azurewebsites.net/api/getuser?code=XJ312iaiqxMTfwLqPCyzPNU6MJkPMIhTDVCiiMWihcmOQ01cPxUi5g==&id=${params.id}`;
   data = {};
-  // fetch(url, {
-  //         method: 'GET', // *GET, POST, PUT, DELETE, etc.
-  //         // mode: 'cors', // no-cors, *cors, same-origin
-  //         // cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-  //         // credentials: 'same-origin', // include, *same-origin, omit
-  //         headers: {
-  //             'Content-Type': 'application/json'
-  //                 // 'Content-Type': 'application/x-www-form-urlencoded',
-  //         },
-  //         // redirect: 'follow', // manual, *follow, error
-  //         // referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-  //     }).then((response) => {
-  //         return response.json();
-  //     })
-  //     .then((data) => { place_stuff(data) })
+  fetch(url, {
+          method: 'GET', // *GET, POST, PUT, DELETE, etc.
+          // mode: 'cors', // no-cors, *cors, same-origin
+          // cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+          // credentials: 'same-origin', // include, *same-origin, omit
+          headers: {
+              'Content-Type': 'application/json'
+                  // 'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          // redirect: 'follow', // manual, *follow, error
+          // referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+      }).then((response) => {
+          return response.json();
+      })
+      .then((data) => { place_stuff(data) })
   // test
-  fetch("/js/test.json")
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => place_stuff(data));
+  // fetch("/js/test.json")
+  //   .then((response) => {
+  //     return response.json();
+  //   })
+  //   .then((data) => place_stuff(data));
 };
 
 document.addEventListener("DOMContentLoaded", init);
