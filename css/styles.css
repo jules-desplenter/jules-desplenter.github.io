@@ -331,12 +331,12 @@ a[href$="undefined"] {
 }
 
 .c-footer-text {
-    margin-bottom: 6px;
+    margin-bottom: 12px;
     color: black;
 }
 
 .c-footer-image {
-    margin-bottom: 0.8rem;
+    margin-bottom: 20px;
     margin-right: 8px;
 }
 

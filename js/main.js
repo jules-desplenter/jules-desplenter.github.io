@@ -102,7 +102,7 @@ const init = async () => {
   setTimeout(() => {
     splash[0].classList.add("display-none");
     splash[1].classList.add("display-none");
-  }, 2000);
+  }, 3000);
   // online
   const urlSearchParams = new URLSearchParams(window.location.search);
   const params = Object.fromEntries(urlSearchParams.entries());
