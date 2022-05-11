@@ -71,6 +71,81 @@ const place_stuff = (data) => {
       importance: data.whatsapp_importance,
       social: "Whatsapp",
     });
+    links.push({
+      link: data.appstore,
+      importance: data.appstore_importance,
+      social: "Appstore",
+    });
+    links.push({
+      link: data.behance,
+      importance: data.behance_importance,
+      social: "Behance",
+    });
+    links.push({
+      link: data.customlink,
+      importance: data.customlink_importance,
+      social: "Customlink",
+    });
+    links.push({
+      link: data.drive,
+      importance: data.drive_importance,
+      social: "Drive",
+    });
+    links.push({
+      link: data.dropbox,
+      importance: data.dropbox_importance,
+      social: "Dropbox",
+    });
+    links.push({
+      link: data.flickr,
+      importance: data.flickr_importance,
+      social: "Flickr",
+    });
+    links.push({
+      link: data.github,
+      importance: data.github_importance,
+      social: "Github",
+    });
+    links.push({
+      link: data.snapchat,
+      importance: data.snapchat_importance,
+      social: "Snapchat",
+    });
+    links.push({
+      link: data.stackoverflow,
+      importance: data.stackoverflow_importance,
+      social: "Stackoverflow",
+    });
+    links.push({
+      link: data.tripadvisor,
+      importance: data.tripadvisor_importance,
+      social: "Tripadvisor",
+    });
+    links.push({
+      link: data.twitter,
+      importance: data.twitter_importance,
+      social: "Twitter",
+    });
+    links.push({
+      link: data.vimeo,
+      importance: data.vimeo_importance,
+      social: "Vimeo",
+    });
+    links.push({
+      link: data.xing,
+      importance: data.xing_importance,
+      social: "Xing",
+    });
+    links.push({
+      link: data.youtube,
+      importance: data.youtube_importance,
+      social: "Youtube",
+    });
+    links.push({
+      link: data.yelp,
+      importance: data.yelp_importance,
+      social: "Yelp",
+    });
     links.sort(function (a, b) {
         if (a.importance == null) {
             return 1;
@@ -82,14 +157,14 @@ const place_stuff = (data) => {
     html = `<a
     class="c-main__links-items c-main__links-items-first"
     href="${links[0].link}"
-    ><div class="c-first"><img class="c-pic c-pic-first" src="./images/iconmonstr-${links[0].social}.svg" alt="facebook logo"
+    ><div class="c-first"><img class="c-pic c-pic-first" src="./images/logos/${links[0].social}.svg" alt="facebook logo"
   /><div><div class="c-main__links-text-first">${links[0].social}</div><div class="c-main__links-text">Make sure to take a look here it's my favorite!</div></div></div></a>`;
     for (i = 1; i < links.length; i++) {
       if (links[i].importance) {
         html += `<a
       class="c-main__links-items"
       href="${links[i].link}"
-      ><img class="c-pic" src="./images/iconmonstr-${links[i].social}.svg" alt="facebook logo"
+      ><img class="c-pic" src="./images/logos/${links[i].social}.svg" alt="facebook logo"
     /><div class="c-main__links-text">${links[i].social}</div></a>`;
       }
     }
@@ -102,7 +177,7 @@ const init = async () => {
   setTimeout(() => {
     splash[0].classList.add("display-none");
     splash[1].classList.add("display-none");
-  }, 3000);
+  }, 2000);
   // online
   const urlSearchParams = new URLSearchParams(window.location.search);
   const params = Object.fromEntries(urlSearchParams.entries());
