@@ -146,6 +146,111 @@ const place_stuff = (data) => {
       importance: data.yelp_importance,
       social: "Yelp",
     });
+    links.push({
+      link: data.appleMusic,
+      importance: data.appleMusic_importance,
+      social: "AppleMusic",
+    });
+    links.push({
+      link: data.autoScout,
+      importance: data.autoScout_importance,
+      social: "AutoScout",
+    });
+    links.push({
+      link: data.eventbrite,
+      importance: data.eventbrite_importance,
+      social: "Eventbrite",
+    });
+    links.push({
+      link: data.fiverr,
+      importance: data.fiverr_importance,
+      social: "Fiverr",
+    });
+    links.push({
+      link: data.freelancer,
+      importance: data.freelancer_importance,
+      social: "Freelancer",
+    });
+    links.push({
+      link: data.messenger,
+      importance: data.messenger_importance,
+      social: "Messenger",
+    });
+    links.push({
+      link: data.payPal,
+      importance: data.payPal_importance,
+      social: "PayPal",
+    });
+    links.push({
+      link: data.reddit,
+      importance: data.reddit_importance,
+      social: "Reddit",
+    });
+    links.push({
+      link: data.signal,
+      importance: data.signal_importance,
+      social: "Signal",
+    });
+    links.push({
+      link: data.skype,
+      importance: data.skype_importance,
+      social: "Skype",
+    });
+    links.push({
+      link: data.slack,
+      importance: data.slack_importance,
+      social: "Slack",
+    });
+    links.push({
+      link: data.spotify,
+      importance: data.spotify_importance,
+      social: "Spotify",
+    });
+    links.push({
+      link: data.teams,
+      importance: data.teams_importance,
+      social: "Teams",
+    });
+    links.push({
+      link: data.telegram,
+      importance: data.telegram_importance,
+      social: "Telegram",
+    });
+    links.push({
+      link: data.threema,
+      importance: data.threema_importance,
+      social: "Threema",
+    });
+    links.push({
+      link: data.tiktok,
+      importance: data.tiktok_importance,
+      social: "Tiktok",
+    });
+    links.push({
+      link: data.twitch,
+      importance: data.twitch_importance,
+      social: "Twitch",
+    });
+    links.push({
+      link: data.upwork,
+      importance: data.upwork_importance,
+      social: "Upwork",
+    });
+    links.push({
+      link: data.weChat,
+      importance: data.weChat_importance,
+      social: "WeChat",
+    });
+    links.push({
+      link: data.weTransfer,
+      importance: data.weTransfer_importance,
+      social: "WeTransfer",
+    });
+    links.push({
+      link: data.zoom,
+      importance: data.zoom_importance,
+      social: "Zoom",
+    });
     links.sort(function (a, b) {
         if (a.importance == null) {
             return 1;
@@ -157,14 +262,14 @@ const place_stuff = (data) => {
         html = `<a
     class="c-main__links-items c-main__links-items-first"
     href="${links[0].link}"
-    ><div class="c-first"><img class="c-pic c-pic-first" src="./images/logos/${links[0].social}.svg" alt="facebook logo"
+    ><div class="c-first"><img class="c-pic c-pic-first" src="./images/logos/${links[0].social}-Icon.png" alt="facebook logo"
   /><div><div class="c-main__links-text-first">${links[0].social}</div><div class="c-main__links-text">Make sure to take a look here it's my favorite!</div></div></div></a>`;
         for (i = 1; i < links.length; i++) {
             if (links[i].importance) {
                 html += `<a
       class="c-main__links-items"
       href="${links[i].link}"
-      ><img class="c-pic" src="./images/logos/${links[i].social}.svg" alt="facebook logo"
+      ><img class="c-pic" src="./images/logos/${links[i].social}-Icon.png" alt="facebook logo"
     /><div class="c-main__links-text">${links[i].social}</div></a>`;
             }
         }
@@ -203,7 +308,7 @@ const init = async () => {
   //   .then((response) => {
   //     return response.json();
   //   })
-  //   .then((data) => place_stuff(data));
+    // .then((data) => place_stuff(data));
 };
 
 document.addEventListener("DOMContentLoaded", init);
