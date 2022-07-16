@@ -251,11 +251,11 @@ const place_stuff = (data) => {
             social: "Zoom",
         });
         links.sort(function(a, b) {
-            if (a.importance == null) {
-                return 1;
-            } else {
-                return a.importance - b.importance;
-            }
+            // if (a.importance == null) {
+            //     return 1;
+            // } else {
+            return a.importance > b.importance;
+            // }
         });
 
         html = `<a
