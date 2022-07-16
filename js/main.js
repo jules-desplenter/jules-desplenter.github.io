@@ -250,7 +250,7 @@ const place_stuff = (data) => {
             importance: data.zoom_importance,
             social: "Zoom",
         });
-        links = links.filter((a) => a.link != "")
+        links = links.filter((a) => a.link != "" && a.link != undefined)
         links = links.sort(function(a, b) {
             // if (a.importance == null) {
             //     return 1;
@@ -258,7 +258,7 @@ const place_stuff = (data) => {
             return a.importance - b.importance;
             // }
         });
-
+        console.log(links);
         html = `<a
     class="c-main__links-items c-main__links-items-first"
     href="${links[0].link}"
