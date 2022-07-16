@@ -258,7 +258,6 @@ const place_stuff = (data) => {
             return a.importance - b.importance;
             // }
         });
-        console.log(links);
         html = `<a
     class="c-main__links-items c-main__links-items-first"
     href="${links[0].link}"
