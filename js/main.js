@@ -250,6 +250,126 @@ const place_stuff = (data) => {
             importance: data.zoom_importance,
             social: "Zoom",
         });
+        links.push({
+            link: data.googlePlayStore,
+            importance: data.googlePlayStore_importance,
+            social: "GooglePlayStore",
+        });
+        links.push({
+            link: data.cv,
+            importance: data.cv_importance,
+            social: "Cv",
+        });
+        links.push({
+            link: data.catalogus,
+            importance: data.catalogus_importance,
+            social: "Catalogus",
+        });
+        links.push({
+            link: data.website,
+            importance: data.website_importance,
+            social: "Website",
+        });
+        links.push({
+            link: data.linktree,
+            importance: data.linktree_importance,
+            social: "Linktree",
+        });
+        links.push({
+            link: data.pinterest,
+            importance: data.pinterest_importance,
+            social: "Pinterest",
+        });
+        links.push({
+            link: data.discord,
+            importance: data.discord_importance,
+            social: "Discord",
+        });
+        links.push({
+            link: data.docusign,
+            importance: data.docusign_importance,
+            social: "Docusign",
+        });
+        links.push({
+            link: data.soundcloud,
+            importance: data.soundcloud_importance,
+            social: "Soundcloud",
+        });
+        links.push({
+            link: data.googleMaps,
+            importance: data.googleMaps_importance,
+            social: "GoogleMaps",
+        });
+        links.push({
+            link: data.waze,
+            importance: data.waze_importance,
+            social: "Waze",
+        });
+        links.push({
+            link: data.amazon,
+            importance: data.amazon_importance,
+            social: "Amazon",
+        });
+        links.push({
+            link: data.weWork,
+            importance: data.weWork_importance,
+            social: "WeWork",
+        });
+        links.push({
+            link: data.calendly,
+            importance: data.calendly_importance,
+            social: "Calendly",
+        });
+        links.push({
+            link: data.vivino,
+            importance: data.vivino_importance,
+            social: "Vivino",
+        });
+        links.push({
+            link: data.box,
+            importance: data.box_importance,
+            social: "Box",
+        });
+        links.push({
+            link: data.chrono24,
+            importance: data.chrono24_importance,
+            social: "Chrono24",
+        });
+        links.push({
+            link: data.alibaba,
+            importance: data.alibaba_importance,
+            social: "Alibaba",
+        });
+        links.push({
+            link: data.dribble,
+            importance: data.dribble_importance,
+            social: "Dribble",
+        });
+        links.push({
+            link: data.adobeFillAndSign,
+            importance: data.adobeFillAndSign_importance,
+            social: "AdobeFillAndSign",
+        });
+        links.push({
+            link: data.asana,
+            importance: data.asana_importance,
+            social: "Asana",
+        });
+        links.push({
+            link: data.googleMeet,
+            importance: data.googleMeet_importance,
+            social: "GoogleMeet",
+        });
+        links.push({
+            link: data.maltFreelance,
+            importance: data.maltFreelance_importance,
+            social: "MaltFreelance",
+        });
+        links.push({
+            link: data.breakbulkMeet,
+            importance: data.breakbulkMeet_importance,
+            social: "BreakbulkMeet",
+        });
         links = links.filter((a) => a.link != "" && a.link != undefined)
         links = links.sort(function(a, b) {
             // if (a.importance == null) {
