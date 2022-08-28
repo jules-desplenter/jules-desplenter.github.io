@@ -370,6 +370,46 @@ const place_stuff = (data) => {
             importance: data.breakbulkMeet_importance,
             social: "BreakbulkMeet",
         });
+        links.push({
+            link: data.crunchbase,
+            importance: data.crunchbase_importance,
+            social: "Crunchbase",
+        });
+        links.push({
+            link: data.theHub,
+            importance: data.theHub_importance,
+            social: "TheHub",
+        });
+        links.push({
+            link: data.gofundme,
+            importance: data.gofundme_importance,
+            social: "Gofundme",
+        });
+        links.push({
+            link: data.kickstarter,
+            importance: data.kickstarter_importance,
+            social: "Kickstarter",
+        });
+        links.push({
+            link: data.indiegogo,
+            importance: data.indiegogo_importance,
+            social: "Indiegogo",
+        });
+        links.push({
+            link: data.breakbulkMeet,
+            importance: data.breakbulkMeet_importance,
+            social: "BreakbulkMeet",
+        });
+        links.push({
+            link: data.call,
+            importance: data.call_importance,
+            social: "Call",
+        });
+        links.push({
+            link: data.fundly,
+            importance: data.fundly_importance,
+            social: "Fundly",
+        });
         links = links.filter((a) => a.link != "" && a.link != undefined)
         links = links.sort(function(a, b) {
             // if (a.importance == null) {
