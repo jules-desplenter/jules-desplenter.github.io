@@ -48,8 +48,8 @@ html {
 }
 
 .c-all {
-    transform: translatey(-100vh);
-    opacity: 0;
+    /* transform: translatey(-100vh);
+    opacity: 0; */
 }
 
 
@@ -144,14 +144,14 @@ html {
 /* Select every 3rd list item starting with first */
 
 .c-main__links-items:nth-child(3n - 2) {
-    justify-self: end;
+    /* justify-self: end; */
 }
 
 
 /* Select every 3rd list item starting with 2nd */
 
 .c-main__links-items:nth-child(3n - 1) {
-    justify-self: start;
+    /* justify-self: start; */
 }
 
 
@@ -164,12 +164,13 @@ html {
 .c-main__links-items-first {
     grid-column-start: 1;
     grid-column-end: 4;
-    height: 13rem;
+    height: 11rem;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     margin-top: -2rem;
+    margin-bottom: -0.7rem;
 }
 
 .c-first {
@@ -182,6 +183,7 @@ html {
     flex-direction: row;
     border-radius: 2rem;
     padding: 1rem;
+    margin-bottom: 1rem;
 }
 
 .c-main__links-text {
@@ -211,6 +213,7 @@ html {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    margin-bottom: 1.4rem;
 }
 
 .c-main__link {
@@ -260,9 +263,11 @@ html {
 }
 
 .c-pic {
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
     border-radius: 20%;
+    -webkit-box-shadow: 1px 3px 10px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 3px 10px 3px rgba(0, 0, 0, 0.5);
 }
 
 .c-pic-first {
@@ -282,14 +287,20 @@ html {
 }
 
 .splash.display-none {
-    transform: translatey(120vh);
-    transition: all .2s;
+    /* transform: (120vh);
+    transition: all .2s; */
+    transition: opacity 1s;
+    opacity: 0;
+}
+
+.splash.none {
+    display: none;
 }
 
 .c-all.display-none {
-    transform: translatey(0);
+    /* transform: translatey(0);
     transition: transform .5s;
-    opacity: 1;
+    opacity: 1; */
 }
 
 .splash-logo {
@@ -298,9 +309,8 @@ html {
 }
 
 .splash-app {
-    width: 13rem;
-    margin-left: 1rem;
-    opacity: 0.75;
+    width: 20rem;
+    margin-right: 1rem;
 }
 
 .splash-line {
@@ -312,7 +322,7 @@ html {
 }
 
 .c-footer {
-    margin-top: 5rem;
+    margin-top: 2rem;
     margin-bottom: 0.5rem;
     display: flex;
     justify-content: center;
@@ -396,7 +406,7 @@ a[href$="undefined"] {
         margin-top: -1rem;
     }
     .splash-app {
-        width: 6rem;
+        width: 10rem;
         margin-left: 0;
         margin-bottom: -6.5vh;
     }

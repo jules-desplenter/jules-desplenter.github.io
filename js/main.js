@@ -36,8 +36,8 @@ const place_stuff = (data) => {
         document.getElementById("bio").innerHTML = data.bio;
         document.getElementById("function").innerHTML = data.function;
         document.getElementById("location").innerHTML = data.location;
-        document.getElementById("picture").src = data.picture;
-        document.getElementById("companypicture").src = data.companypicture;
+        data.picture ? document.getElementById("picture").src = data.picture : () => {};
+        data.companypicture ? document.getElementById("companypicture").src = data.companypicture : () => {};
         if (data.coverpicture != "" && data.coverpicture) {
             document.getElementById("cover").src = data.coverpicture;
         }
@@ -444,7 +444,11 @@ const init = async() => {
         splash[0].classList.add("display-none");
         splash[1].classList.add("display-none");
     }, 2000);
-    // online
+    setTimeout(() => {
+            splash[0].classList.add("none");
+            splash[1].classList.add("none");
+        }, 3000)
+        // online
     const urlSearchParams = new URLSearchParams(window.location.search);
     const params = Object.fromEntries(urlSearchParams.entries());
     url = `https://dotdbelgium.azurewebsites.net/api/getuser?code=XJ312iaiqxMTfwLqPCyzPNU6MJkPMIhTDVCiiMWihcmOQ01cPxUi5g==&id=${params.id}`;
@@ -470,7 +474,7 @@ const init = async() => {
         .then((data) => {
             place_stuff(data);
         });
-    // test
+    // // test
     // fetch("/js/test.json")
     //     .then((response) => {
     //         return response.json();
